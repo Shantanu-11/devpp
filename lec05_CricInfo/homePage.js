@@ -2,10 +2,7 @@ const request = require("request");
 const cheerio = require("cheerio");
 const getAllMatches = require("./allMatches");
 
-// require();
 
-
-// 5 min
 request("https://www.espncricinfo.com/series/ipl-2020-21-1210595" , cb);
 
 function cb(error , response , data){
