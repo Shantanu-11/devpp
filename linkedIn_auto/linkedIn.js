@@ -18,37 +18,24 @@ let pw="Kittu@11";
     await tab.click(".sign-in-form__submit-button");
     await tab.waitForSelector('.search-global-typeahead.global-nav__search-typeahead',{visible:true});
     await tab.click('.search-global-typeahead.global-nav__search-typeahead');
-    await tab.type('.search-global-typeahead.global-nav__search-typeahead',"google");
+    await tab.type('.search-global-typeahead.global-nav__search-typeahead',"pepcoding");
     await tab.keyboard.press('Enter');
     await tab.waitForSelector(".artdeco-pill.artdeco-pill--slate.artdeco-pill--2.artdeco-pill--choice.ember-view.search-reusables__filter-pill-button",{visible:true});
     let peopleButton = await tab.$('.artdeco-pill.artdeco-pill--slate.artdeco-pill--2.artdeco-pill--choice.ember-view.search-reusables__filter-pill-button');
     await peopleButton.click();
     await tab.waitForSelector('.entity-result__title-text.t-16',{visible:true});
     let connections = await tab.$$('.entity-result__title-text.t-16');
-    console.log(connections[0]);
+    // console.log(connections[0]);
     await tab.waitForTimeout(5000);
-
-
     for(let i=0;i<connections.length;i++){
-        let newTab = await browser.newPage();
-
-        await newTab.goto("https://www.google.com/")
-        await newTab.waitForTimeout(2000);
-        
-        let connect=connections[i];
-        let halfLink=await newTab.evaluate( function(elem){ return elem.getAttribute("href");  }  ,  connect);
-        console.log(halfLink);
-        let completeLink="https://www.linkedin.com"+halfLink;
-        
-        await newTab.goto(completeLink);
-
-        await newTab.waitForSelector('.artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view',{visible:true});
-        await newTab.waitForTimeout(5000);
-        await newTab.click(completeLink);
-        await newTab.waitForTimeout(5000);
-        await newTab.waitForSelector('.ml1.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view',{visible:true});
-        await newTab.waitForTimeout(5000);
-        await newTab.click('.ml1.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view');  
-        await newTab.close();  
+        await connections[i].click();
+        await tab.waitForSelector('.artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view',{visible:true});
+        await tab.waitForTimeout(5000);
+        await tab.click('.artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view');
+        await tab.waitForTimeout(5000);
+        await tab.waitForSelector('.ml1.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view',{visible:true});
+        await tab.waitForTimeout(5000);
+        await tab.click('.ml1.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view');    
     }
+
 })();
