@@ -38,9 +38,7 @@ body{
     height: 80vh;
     border:none;
 }
-.todo-list{
 
-}
 .todo-item{
    display: block;
    margin:auto;
