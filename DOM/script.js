@@ -39,6 +39,8 @@ function addTodo(){
         console.log(liItem);
 
  
+    }else{
+        alert("you haven't entered any todo")
     }
     todoInput.value="";
 }
