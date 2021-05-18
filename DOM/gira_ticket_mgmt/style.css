@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    /* display: flex; */
+}
+body{
+    background-color: #1abc9c;
+}
+.nav{
+    display: flex;
+    height: 10%;
+    min-width: 100%;
+    min-height: 10%;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    top:0px;
+    background-color:#833471;
+}
+.priority-box{
+    min-width: 200px;
+    min-height: 50px;
+    background-color: #2d3436;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    left:150px;
+    
+}
+.second-box{
+    height: 50%;
+    min-width: 100px;
+    min-height: 50px;
+    background-color: #2d3436;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    left:300px;
+    font-size: 1.2rem;
+}
+
+.box{
+    height: 20px;
+    width: 30px;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:5px;
+    border-radius: 5px;
+}
+/* .box:hover{
+    opacity: 0.5;
+} */
+
+.pink{
+    background-color: #ecf0f1 !important;
+}
+.green{
+    background-color: #2ecc71 !important;
+}
+.blue{
+    background-color: #2980b9 !important;
+}
+.black{
+    background-color: #34495e !important;
+}
+
+.close{
+    min-height: 100%;
+   min-width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.add{
+   min-height: 100%;
+   min-width: 50%;
+   width: 50%;;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.second-box div.add:hover, div.close:hover{
+     background-color:rgb(27,27,27);
+     border-radius: 5px;
+}
+
+.modal{
+    display: flex;
+    width: 30rem;
+    height: 20rem;
+    background-color: pink;
+    position: absolute;
+    top: 10rem;
+    left: calc((100vw - 30rem)/2);
+}
+.modal-textbox{
+    display: flex;
+    width: 70%;
+}
+
+.modal-filter-options{
+    background-color: #2d3436;
+    display: flex;
+    min-width: 30%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.modal.filter{
+    width: 4rem;
+    height: 5vh;
+    margin:10px;
+    border-radius: 0px;
+}
