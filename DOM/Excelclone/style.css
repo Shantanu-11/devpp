@@ -40,6 +40,8 @@ body{
 .sheets{
     border: 1px solid;
     height: 30px;
+    position: relative;
+    top: fixed;
 }
 .top-left-cell {
     height: 30px;
