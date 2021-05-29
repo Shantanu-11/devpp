@@ -19,7 +19,10 @@
   "homepage": "https://github.com/Shantanu-11/dev_pp#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.5",
+    "loadash": "^1.0.0",
     "mkdir": "0.0.2",
-    "request": "^2.88.2"
+    "puppeteer": "^8.0.0",
+    "request": "^2.88.2",
+    "zomato": "^1.1.0"
   }
 }

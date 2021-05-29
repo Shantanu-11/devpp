@@ -2,6 +2,7 @@
     box-sizing : border-box;
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 
 .video-container {
@@ -68,4 +69,25 @@ video {
     100%{
         transform: scale(1);
     }
+}
+.zoomInOut{
+    flex-direction: column; */
+    height: 60px !important;
+    border-radius: 0 !important;
+    border: none !important;
+   justify-content: space-between !important; */
+}
+.zoomInOut div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+     
+    background: white;
+    height: 55%;
+    width: 60%;
+    border:1px solid gold;
+    border-radius: 20px; 
+    cursor:pointer;
+    font-weight:bold;
+
 }

@@ -26,15 +26,15 @@ let pw="Kittu@11";
     await tab.waitForSelector('.entity-result__title-text.t-16',{visible:true});
     let connections = await tab.$$('.entity-result__title-text.t-16');
     // console.log(connections[0]);
-    await tab.waitForTimeout(5000);
+    await tab.waitForTimeout(3000);
     for(let i=0;i<connections.length;i++){
         await connections[i].click();
         await tab.waitForSelector('.artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view',{visible:true});
-        await tab.waitForTimeout(5000);
+        await tab.waitForTimeout(3000);
         await tab.click('.artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view');
-        await tab.waitForTimeout(5000);
+        await tab.waitForTimeout(3000);
         await tab.waitForSelector('.ml1.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view',{visible:true});
-        await tab.waitForTimeout(5000);
+        await tab.waitForTimeout(1000);
         await tab.click('.ml1.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view');    
     }
 
